@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaslesVPN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__layout">
+                <div class="logo">
+                    <img src="images/logo-icon.svg" alt="" class="logo__icon">
+                    <span class="logo__text">
+                        Lasles<span class="logo__text-bold">VPN</span>
+                    </span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#section-about">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#section-pricing">Pricing</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#section-features">Features</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#section-testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#section-help">Help</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="toggle" id="theme-toggle" aria-label="Переключить тему"></button>
+                <div class="header__actions">
+                    <button class="header__btn-sign-in" id="openRegisterBtn">Sign in</button>
+                    <button class="header__btn-sign-up btn" id="openLoginBtn">Sign Up</button=>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="section-about">
+        <div class="container">
+            <div class="hero__layout">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Want anything to be easy with <span class="hero__title-highlight">LaslesVPN.</span>
+                    </h1>
+                    <p class="hero__description">
+                        Provide a network for all your needs with ease and fun using <span
+                            class="hero__description-highlight">LaslesVPN</span> discover interesting
+                        features from us.
+                    </p>
+                    <a href="#" id="openSubmitBtn" class="hero__btn btn btn--squared">Get Started</a>
+                </div>
+                <div class="hero__image">
+                    <img src="images/hero-illustration.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats scroll-item">
+        <div class="container">
+            <div class="stats__layout">
+                <div class="stats__item">
+                    <div class="stats__icon-wrapper">
+                        <img src="images/user-icon.svg" alt="" class="stats__icon-image">
+                    </div>
+                    <div class="stats__info">
+                        <div class="stats__number">90+</div>
+                        <div class="stats__label">Users</div>
+                    </div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__icon-wrapper">
+                        <img src="images/location-icon.svg" alt="" class="stats__icon-image">
+                    </div>
+                    <div class="stats__info">
+                        <div class="stats__number">30+</div>
+                        <div class="stats__label">Locations</div>
+                    </div>
+                </div>
+                <div class="stats__item">
+                    <div class="stats__icon-wrapper">
+                        <img src="images/server-icon.svg" alt="" class="stats__icon-image">
+                    </div>
+                    <div class="stats__info">
+                        <div class="stats__number">50+</div>
+                        <div class="stats__label">Servers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features scroll-item" id="section-features">
+        <div class="container">
+            <div class="features__layout">
+                <div class="features__image-wrapper">
+                    <img class="features__image" src="images/features-illustration.svg" alt="Features Illustration">
+                </div>
+                <div class="features__content">
+                    <h2 class="features__title">
+                        We Provide Many Features You Can Use
+                    </h2>
+                    <p class="features__description">
+                        You can explore the features that we provide with fun and have their own functions each feature.
+                    </p>
+                    <ul class="features__list">
+                        <li class="features__item">
+                            <img class="features__item-icon" src="images/check-icon.svg" alt="">
+                            <span>Powerfull online protection.</span>
+                        </li>
+                        <li class="features__item">
+                            <img class="features__item-icon" src="images/check-icon.svg" alt="Check Icon">
+                            <span>Internet without borders.</span>
+                        </li>
+                        <li class="features__item">
+                            <img class="features__item-icon" src="images/check-icon.svg" alt="Check Icon">
+                            <span>Supercharged VPN.</span>
+                        </li>
+                        <li class="features__item">
+                            <img class="features__item-icon" src="images/check-icon.svg" alt="Check Icon">
+                            <span>No specific time limits.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing scroll-item" id="section-pricing">
+        <div class="container">
+            <div class="pricing__layout">
+                <div class="pricing__header">
+                    <h2 class="pricing__title">Choose Your Plan</h2>
+                    <p class="pricing__description">
+                        Let's choose the package that is best for you and explore it happily
+                        and cheerfully.
+                    </p>
+                </div>
+                <div class="pricing__cards">
+                    <div class="card">
+                        <img src="images/pricing-image.svg" class="card__image" alt="">
+                        <h3 class="card__title">Free Plan</h3>
+                        <ul class="card__list">
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Unlimited Bandwitch</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Encrypted Connection</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>No Traffic Logs</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Works on All Devices</span>
+                            </li>
+                        </ul>
+                        <div class="card__price-wrapper card__price-wrapper--free">
+                            Free
+                        </div>
+                        <a href="#" class="btn btn--card">Select</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/pricing-image.svg" class="card__image" alt="Card Image">
+                        <h3 class="card__title">Standard Plan</h3>
+                        <ul class="card__list">
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Unlimited Bandwitch</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Encrypted Connection</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>No Traffic Logs</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Works on All Devices</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Connect Anyware</span>
+                            </li>
+                        </ul>
+                        <div class="card__price-wrapper">
+                            <span class="card__price-amount">10$ </span>
+                            <span class="card__price-period">\ mo</span>
+                        </div>
+                        <a href="" class="btn btn--card">Select</a>
+                    </div>
+                    <div class="card">
+                        <img src="images/pricing-image.svg" class="card__image" alt="Card Image">
+                        <h3 class="card__title">Premium Plan</h3>
+                        <ul class="card__list">
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Unlimited Bandwitch</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Encrypted Connection</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>No Traffic Logs</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Works on All Devices</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Connect Anyware</span>
+                            </li>
+                            <li>
+                                <img src="images/check-icon-green.svg" alt="">
+                                <span>Get New Features</span>
+                            </li>
+                        </ul>
+                        <div class="card__price-wrapper">
+                            <span class="card__price-amount">12$ </span>
+                            <span class="card__price-period">\ mo</span>
+                        </div>
+                        <a href="" class="btn btn--card">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations scroll-item">
+        <div class="container">
+
+            <div class="locations__layout">
+                <div class="locations__header">
+                    <h2 class="locations__title">Huge Global Network of Fast VPN</h2>
+                    <p class="locations__description">
+                        See <span class="locations__description-highlight">LaslesVPN</span> everywhere to make it easier
+                        for you when you move
+                        locations.
+                    </p>
+                </div>
+                <!-- ??? сложная часть -->
+                <!-- Может через bg сделать картинку? -->
+                <div class="locations-map map-wrapper">
+                    <img src="images/world-map.svg" alt="Locations Map" class="map-image">
+                    <div class="map-point-wrapper" style="left: 46%; top: 24%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-uk.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            United Kingdom
+                                        </div>
+                                        <div class="server__location-city">
+                                            London
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 25%; top: 36%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-usa.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            United States
+                                        </div>
+                                        <div class="server__location-city">
+                                            New York
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 50%; top: 28%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-netherlands.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            Netherlands
+                                        </div>
+                                        <div class="server__location-city">
+                                            Amsterdam
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 80%; top: 40%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-japan.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            Japan
+                                        </div>
+                                        <div class="server__location-city">
+                                            Tokyo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 57%; top: 25%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-russia.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            Russia
+                                        </div>
+                                        <div class="server__location-city">
+                                            Moscow
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 72%; top: 60%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-singapore.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            Singapore
+                                        </div>
+                                        <div class="server__location-city">
+                                            Singapore
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 54%; top: 43%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-egypt.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            Egypt
+                                        </div>
+                                        <div class="server__location-city">
+                                            Cairo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-point-wrapper" style="left: 22%; top: 30%;">
+                        <div class="pulse-bg"></div>
+                        <div class="pulse-dot"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="server">
+                            <div class="server__layout">
+                                <div class="server__info">
+                                    <img src="./images/flag-canada.svg" class="server__flag" alt="">
+                                    <div class="server__location">
+                                        <div class="server__location-country">
+                                            Canada
+                                        </div>
+                                        <div class="server__location-city">
+                                            Toronto
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="server__status-wrapper">
+                                    <div class="server__status-dot"></div>
+                                    <div class="server__status-label">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="services__logos">
+                    <div class="services__logo-container">
+                        <img src="images/logo-company1.png" alt="" class="services__logo services__logo--netflix">
+                    </div>
+                    <div class="services__logo-container">
+                        <img src="images/logo-company2.png" alt="" class="services__logo services__logo--reddit">
+                    </div>
+                    <div class="services__logo-container services__logo-container--amazon">
+                        <img src="images/logo-company3.png" alt="" class="services__logo services__logo--amazon">
+                    </div>
+                    <div class="services__logo-container">
+                        <img src="images/logo-company4.png" alt="" class="services__logo services__logo--discord">
+                    </div>
+                    <div class="services__logo-container">
+                        <img src="images/logo-company5.png" alt="" class="services__logo services__logo--spotify">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials scroll-item" id="section-testimonials">
+        <div class="container">
+            <div class="testimonials__header">
+                <h2 class="testimonials__title">Trusted by Thousands of Happy Customer</h2>
+                <p class="testimonials__description">
+                    These are the stories of our customers who have joined us with great pleasure when using this crazy
+                    feature.
+                </p>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonials__item">
+                    <div class="testimonials__top">
+                        <div class="testimonials__user">
+                            <img src="images/avatar-1.png" alt="" class="testimonials__avatar">
+                            <div class="testimonials__user-info">
+                                <div class="testimonials__user-name">Viezh Robert</div>
+                                <div class="testimonials__user-country">Warsaw, Poland</div>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating">
+                            <span class="rating-number">4.5</span>
+                            <img src="images/star-icon.svg" alt="" class="rating-star">
+                        </div>
+                    </div>
+                    <p class="testimonials__text">
+                        “Wow... I am very happy to use this VPN, it turned out to be more than
+                        my expectations and so far there have been no problems. LaslesVPN always the best”.
+                    </p>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__top">
+                        <div class="testimonials__user">
+                            <img src="images/avatar-2.png" alt="" class="testimonials__avatar">
+                            <div class="testimonials__user-info">
+                                <div class="testimonials__user-name">Yessica Christy</div>
+                                <div class="testimonials__user-country">Shanxi, China</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonials__rating">
+                            <span class="testimonials__rating-number">4.5</span>
+                            <img src="images/star-icon.svg" alt="" class="testimonials__rating-star">
+                        </div>
+                    </div>
+                    <p class="testimonials__text">
+                        “I like it because I like to travel far and still can connect with high speed.”.
+                    </p>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__top">
+                        <div class="testimonials__user">
+                            <img src="images/avatar-3.png" alt="" class="testimonials__avatar">
+                            <div class="testimonials__user-info">
+                                <div class="testimonials__user-name">Kim Young Jou</div>
+                                <div class="testimonials__user-country">Seoul, South Korea</div>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating">
+                            <span class="rating-number">4.5</span>
+                            <img src="images/star-icon.svg" alt="" class="rating-star">
+                        </div>
+                    </div>
+                    <p class="testimonials__text">
+                        “This is very unusual for my business that currently requires a virtual private network that has
+                        high security.”.
+                    </p>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__top">
+                        <div class="testimonials__user">
+                            <img src="images/avatar-3.png" alt="" class="testimonials__avatar">
+                            <div class="testimonials__user-info">
+                                <div class="testimonials__user-name">Kim Young Jou</div>
+                                <div class="testimonials__user-country">Seoul, South Korea</div>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating">
+                            <span class="rating-number">4.5</span>
+                            <img src="images/star-icon.svg" alt="" class="rating-star">
+                        </div>
+                    </div>
+                    <p class="testimonials__text">
+                        “This is very unusual for my business that currently requires a virtual private network that has
+                        high security.”.
+                    </p>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__top">
+                        <div class="testimonials__user">
+                            <img src="images/avatar-3.png" alt="" class="testimonials__avatar">
+                            <div class="testimonials__user-info">
+                                <div class="testimonials__user-name">Kim Young Jou</div>
+                                <div class="testimonials__user-country">Seoul, South Korea</div>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating">
+                            <span class="rating-number">4.5</span>
+                            <img src="images/star-icon.svg" alt="" class="rating-star">
+                        </div>
+                    </div>
+                    <p class="testimonials__text">
+                        “This is very unusual for my business that currently requires a virtual private network that has
+                        high security.”.
+                    </p>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__top">
+                        <div class="testimonials__user">
+                            <img src="images/avatar-3.png" alt="" class="testimonials__avatar">
+                            <div class="testimonials__user-info">
+                                <div class="testimonials__user-name">Kim Young Jou</div>
+                                <div class="testimonials__user-country">Seoul, South Korea</div>
+                            </div>
+                        </div>
+                        <div class="testimonials__rating">
+                            <span class="rating-number">4.5</span>
+                            <img src="images/star-icon.svg" alt="" class="rating-star">
+                        </div>
+                    </div>
+                    <p class="testimonials__text">
+                        “This is very unusual for my business that currently requires a virtual private network that has
+                        high security.”.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonials__controls">
+                <div class="testimonials__dots">
+                    <!-- <span class="testimonials__dot testimonials__dot--active"></span> -->
+                    <!-- <span class="testimonials__dot"></span> -->
+                    <!-- <span class="testimonials__dot"></span> -->
+                    <!-- <span class="testimonials__dot"></span> -->
+                </div>
+                <div class="testimonials__arrows">
+                    <button class="testimonials__arrow testimonials__arrow--left">
+                        <svg width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.75 7.50156H3.925L8.4625 2.05157C8.67467 1.79629 8.77675 1.46719 8.74628 1.13666C8.7158 0.806128 8.55527 0.501239 8.3 0.289065C8.04473 0.0768921 7.71563 -0.0251853 7.3851 0.00528938C7.05456 0.035764 6.74967 0.196295 6.5375 0.451565L0.2875 7.95156C0.245451 8.01122 0.207849 8.07389 0.175 8.13907C0.175 8.20157 0.175 8.23907 0.0875002 8.30157C0.0308421 8.44489 0.0011764 8.59745 0 8.75156C0.0011764 8.90568 0.0308421 9.05824 0.0875002 9.20156C0.0875002 9.26406 0.0874998 9.30157 0.175 9.36407C0.207849 9.42924 0.245451 9.49191 0.2875 9.55157L6.5375 17.0516C6.65503 17.1927 6.8022 17.3061 6.96856 17.3839C7.13491 17.4617 7.31636 17.5019 7.5 17.5016C7.79207 17.5021 8.07511 17.4004 8.3 17.2141C8.42657 17.1091 8.5312 16.9803 8.60789 16.8348C8.68458 16.6894 8.73183 16.5303 8.74692 16.3665C8.76202 16.2028 8.74466 16.0377 8.69586 15.8807C8.64705 15.7237 8.56775 15.5779 8.4625 15.4516L3.925 10.0016H18.75C19.0815 10.0016 19.3995 9.86987 19.6339 9.63545C19.8683 9.40103 20 9.08309 20 8.75156C20 8.42004 19.8683 8.1021 19.6339 7.86768C19.3995 7.63326 19.0815 7.50156 18.75 7.50156Z" />
+                        </svg>
+                    </button>
+                    <button class="testimonials__arrow testimonials__arrow--right">
+                        <svg width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.25 7.50156H16.075L11.5375 2.05157C11.3253 1.79629 11.2232 1.46719 11.2537 1.13666C11.2842 0.806128 11.4447 0.501239 11.7 0.289065C11.9553 0.0768921 12.2844 -0.0251853 12.6149 0.00528938C12.9454 0.035764 13.2503 0.196295 13.4625 0.451565L19.7125 7.95156C19.7545 8.01122 19.7922 8.07389 19.825 8.13907C19.825 8.20157 19.825 8.23907 19.9125 8.30157C19.9692 8.44489 19.9988 8.59745 20 8.75156C19.9988 8.90568 19.9692 9.05824 19.9125 9.20156C19.9125 9.26406 19.9125 9.30157 19.825 9.36407C19.7922 9.42924 19.7545 9.49191 19.7125 9.55157L13.4625 17.0516C13.345 17.1927 13.1978 17.3061 13.0314 17.3839C12.8651 17.4617 12.6836 17.5019 12.5 17.5016C12.2079 17.5021 11.9249 17.4004 11.7 17.2141C11.5734 17.1091 11.4688 16.9803 11.3921 16.8348C11.3154 16.6894 11.2682 16.5303 11.2531 16.3665C11.238 16.2028 11.2553 16.0377 11.3041 15.8807C11.3529 15.7237 11.4322 15.5779 11.5375 15.4516L16.075 10.0016H1.25C0.91848 10.0016 0.600536 9.86987 0.366116 9.63545C0.131695 9.40103 0 9.08309 0 8.75156C0 8.42004 0.131695 8.1021 0.366116 7.86768C0.600536 7.63326 0.91848 7.50156 1.25 7.50156Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta scroll-item">
+        <div class="container">
+            <div class="cta__card">
+                <div class="cta__info">
+                    <h2 class="cta__title">Subscribe Now for Get Special Features!</h2>
+                    <p class="cta__subtitle">
+                        Let's subscribe with us and find the fun.
+                    </p>
+                </div>
+                <div class="cta__action">
+                    <a href="#" class="cta__btn btn btn--squared">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer scroll-item" id="section-help">
+        <div class="container">
+            <div class="footer__layout">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="images/logo-icon.svg" alt="" class="logo__icon">
+                        <span class="logo__text">Lasles<span class="logo__text-bold">VPN</span></span>
+                    </div>
+                    <p class="footer__description">
+                        <span class="highlight">LaslesVPN</span> is a private virtual network that has unique features
+                        and has high security.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <svg class="footer__social-svg" width="34" height="34" viewBox="0 0 34 34"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.8 0C7.5215 0 0 7.5215 0 16.8C0 26.0785 7.5215 33.6 16.8 33.6C26.0785 33.6 33.6 26.0785 33.6 16.8C33.6 7.5215 26.0785 0 16.8 0ZM20.7795 11.6095H18.2543C17.955 11.6095 17.6225 12.0033 17.6225 12.5265V14.35H20.7813L20.3035 16.9505H17.6225V24.7573H14.6423V16.9505H11.9385V14.35H14.6423V12.8205C14.6423 10.626 16.1648 8.84275 18.2543 8.84275H20.7795V11.6095Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <svg class="footer__social-svg" width="34" height="34" viewBox="0 0 34 34"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.8 0C7.5215 0 0 7.5215 0 16.8C0 26.0785 7.5215 33.6 16.8 33.6C26.0785 33.6 33.6 26.0785 33.6 16.8C33.6 7.5215 26.0785 0 16.8 0ZM23.6338 13.762C23.6408 13.9055 23.6425 14.049 23.6425 14.189C23.6425 18.564 20.3158 23.6058 14.2293 23.6058C12.4308 23.6087 10.6697 23.0922 9.15775 22.1183C9.415 22.1498 9.67925 22.162 9.947 22.162C11.4975 22.162 12.9238 21.6353 14.056 20.7463C13.366 20.7327 12.6974 20.5042 12.1434 20.0927C11.5895 19.6811 11.1777 19.107 10.9655 18.4503C11.461 18.5445 11.9715 18.5247 12.4583 18.3925C11.7093 18.2411 11.0358 17.8353 10.552 17.2439C10.0681 16.6526 9.80369 15.9121 9.8035 15.148V15.1078C10.2498 15.3545 10.7608 15.505 11.3033 15.5225C10.6011 15.0551 10.1041 14.3372 9.91383 13.5155C9.72353 12.6938 9.85434 11.8304 10.2795 11.102C11.1107 12.124 12.1472 12.9601 13.322 13.556C14.4968 14.152 15.7836 14.4947 17.0993 14.5618C16.932 13.8518 17.004 13.1065 17.304 12.4416C17.6041 11.7768 18.1153 11.2297 18.7584 10.8855C19.4014 10.5412 20.1402 10.419 20.8598 10.5379C21.5795 10.6568 22.2396 11.0102 22.7378 11.543C23.4783 11.3965 24.1885 11.1248 24.8378 10.7398C24.5909 11.5065 24.0742 12.1576 23.3835 12.572C24.0395 12.493 24.68 12.3166 25.284 12.0488C24.8404 12.7136 24.2815 13.2938 23.6338 13.762Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <svg class="footer__social-svg" width="34" height="34" viewBox="0 0 34 34"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.05 16.8C22.05 18.1924 21.4969 19.5277 20.5123 20.5123C19.5277 21.4969 18.1924 22.05 16.8 22.05C15.4076 22.05 14.0723 21.4969 13.0877 20.5123C12.1031 19.5277 11.55 18.1924 11.55 16.8C11.55 16.5008 11.5815 16.2085 11.6358 15.925H9.8V22.9198C9.8 23.4063 10.1938 23.8 10.6803 23.8H22.9215C23.1547 23.7995 23.3781 23.7066 23.5428 23.5416C23.7075 23.3765 23.8 23.1529 23.8 22.9198V15.925H21.9643C22.0185 16.2085 22.05 16.5008 22.05 16.8ZM16.8 20.3C17.2597 20.2999 17.715 20.2092 18.1397 20.0332C18.5644 19.8571 18.9502 19.5992 19.2752 19.274C19.6002 18.9488 19.858 18.5628 20.0339 18.138C20.2097 17.7133 20.3001 17.258 20.3 16.7983C20.2999 16.3385 20.2092 15.8833 20.0332 15.4586C19.8571 15.0339 19.5992 14.648 19.274 14.323C18.9488 13.998 18.5628 13.7402 18.138 13.5644C17.7133 13.3886 17.258 13.2981 16.7983 13.2983C15.8698 13.2985 14.9794 13.6675 14.323 14.3243C13.6666 14.981 13.298 15.8715 13.2983 16.8C13.2985 17.7285 13.6675 18.6189 14.3243 19.2752C14.981 19.9316 15.8715 20.3002 16.8 20.3ZM21 13.125H23.0983C23.2377 13.125 23.3714 13.0697 23.4701 12.9713C23.5688 12.8729 23.6245 12.7394 23.625 12.6V10.5018C23.625 10.362 23.5695 10.2281 23.4707 10.1293C23.3719 10.0305 23.238 9.975 23.0983 9.975H21C20.8603 9.975 20.7263 10.0305 20.6275 10.1293C20.5287 10.2281 20.4733 10.362 20.4733 10.5018V12.6C20.475 12.8888 20.7113 13.125 21 13.125ZM16.8 0C12.3444 0 8.07122 1.76999 4.92061 4.92061C1.76999 8.07122 0 12.3444 0 16.8C0 21.2556 1.76999 25.5288 4.92061 28.6794C8.07122 31.83 12.3444 33.6 16.8 33.6C19.0062 33.6 21.1908 33.1655 23.2291 32.3212C25.2674 31.4769 27.1194 30.2394 28.6794 28.6794C30.2394 27.1194 31.4769 25.2674 32.3212 23.2291C33.1655 21.1908 33.6 19.0062 33.6 16.8C33.6 14.5938 33.1655 12.4092 32.3212 10.3709C31.4769 8.33265 30.2394 6.48063 28.6794 4.92061C27.1194 3.36058 25.2674 2.1231 23.2291 1.27882C21.1908 0.434545 19.0062 0 16.8 0ZM25.55 23.6058C25.55 24.675 24.675 25.55 23.6058 25.55H9.99425C8.925 25.55 8.05 24.675 8.05 23.6058V9.99425C8.05 8.925 8.925 8.05 9.99425 8.05H23.6058C24.675 8.05 25.55 8.925 25.55 9.99425V23.6058Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="footer__copy">©2020Lasles<span class="highlight">VPN</span></p>
+                </div>
+                <nav class="footer__menus">
+                    <div class="footer__menu-col">
+                        <h4 class="menu__title">Product</h4>
+                        <ul class="menu__list">
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Server</a></li>
+                            <li><a href="#">Countries</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-col">
+                        <h4 class="menu__title">Engage</h4>
+                        <ul class="menu__list">
+                            <li><a href="#">LaslesVPN ? </a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__menu-col">
+                        <h4 class="menu__title">Earn Money</h4>
+                        <ul class="menu__list">
+                            <li><a href="#">Affiliate</a></li>
+                            <li><a href="#">Become Partner</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+
+    <div class="modal-overlay" id="login">
+        <div class="modal">
+            <button class="modal-close" id="closeLoginBtn">&times;</button>
+            <div class="modal-content">
+                <h2 class="modal-title">Log in</h2>
+                <div class="modal-group">
+                    <label class="login-label" for="">Login: </label>
+                    <input class="login-input" placeholder="Martin" type="text">
+                </div>
+                <div class="modal-group">
+                    <label class="login-label" for="">Password:</label>
+                    <input class="login-input" type="text" placeholder="Jordan">
+                </div>
+                <div class="modal-group">
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" name="remember">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__text">Запомнить меня</span>
+                    </label>
+                </div>
+                <div>
+                    <button class="modal-btn btn">Log in</button>
+                </div>
+                <a class="login-reset-link" href="#">reset password</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="consultation">
+        <div class="modal">
+            <button class="modal-close" id="closeSubmitBtn">&times;</button>
+            <div class="modal-icon">
+                <img src="./images/logo-icon.svg" alt="" srcset="">
+            </div>
+            <h2 class="modal-title">Submit application</h2>
+            <form action="" method="post">
+                <div class="modal-group">
+                    <label class="login-label" for="">Name: </label>
+                    <input class="login-input" placeholder="Martin" type="text">
+                </div>
+                <div class="modal-group">
+                    <label class="login-label" for="">Email:</label>
+                    <input class="login-input" type="text" placeholder="Jordan">
+                </div>
+                <div>
+                    <button class="modal-btn btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="register">
+        <div class="modal">
+            <button class="modal-close" id="closeRegisterBtn">&times;</button>
+            <h2>Register</h2>
+        </div>
+    </div>
+
+    <!--  BACK TO TOP BUTTON -->
+
+    <button id="backToTop" class="back-to-top" aria-label="Наверх">
+        ↑
+    </button>
+
+    <!-- SCRIPTS -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

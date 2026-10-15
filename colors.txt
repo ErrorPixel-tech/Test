@@ -1,0 +1,3 @@
+#0B132A; var(--color-dark-main);
+#4F5665; var(--color-main);
+#fff; var(--color-bg);
