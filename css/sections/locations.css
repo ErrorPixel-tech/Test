@@ -1,0 +1,253 @@
+/* LOCATIONS */
+
+.locations {
+    margin-bottom: 50px;
+}
+
+
+.locations__header {
+    text-align: center;
+}
+
+.locations__title {
+    margin: 0 auto 20px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.locations__description {
+    margin: 0 auto 56px;
+}
+
+.locations__description-highlight {
+    font-weight: 500;
+}
+
+.locations-map {
+    margin-bottom: 36px;
+}
+
+
+
+/* MAP */
+
+.map-image {
+    margin: 0 auto;
+    background-color: var(--bg);
+}
+
+/* ANIMATION PULSE */
+
+.map-wrapper {
+    position: relative;
+}
+
+.map-point-wrapper:hover .server {
+    display: flex;
+}
+
+.map-point-wrapper {
+    position: absolute;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    /* Центрируем точку */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 10; */
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: #FF4444;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
+    z-index: 2;
+}
+
+.pulse-bg {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    /* border: solid 2px var(--color-accent); */
+    /* outline: 4px solid var(--bg-color); */
+    border-radius: 50%;
+    /* background-color: var(--bg-color); */
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 68, 68, 0.5);
+    animation: pulse 1.8s ease-out infinite;
+}
+
+/* Только для второго кольца (если нужно двойное) */
+.pulse-ring:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+
+/* SERVER */
+
+.server {
+    width: 90%;
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: transparent;
+}
+
+.server__layout {
+    border: var(--border-grey);
+    background-color: var(--bg-rgba-1);
+    box-shadow: var(--shadow-2);
+    padding: 10px 16px;
+    /* border-radius: 12px; */
+    /* border-radius: 50px; */
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    /* min-width: 350px; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.server__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.server__flag {
+    height: 30px;
+}
+
+.server__location {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.server__location-country {
+    font-weight: 700;
+}
+
+.server__status-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.server__status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #22C55E;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    animation: server-pulse-grow 2s infinite;
+}
+
+.server__status-label {
+    color: #22C55E;
+}
+
+@keyframes server-pulse-grow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.server__btn {
+    padding: 4px 14px;
+}
+
+
+@media (min-width: 768px) {
+
+
+    /* LOCATIONS */
+
+    .locations__title {
+        width: 384px;
+        max-width: 100%;
+    }
+
+    .locations__description {
+        margin: 0 auto 156px;
+        width: 555px;
+        max-width: 100%;
+    }
+
+    /* MAP */
+
+
+    /* ANIMATION PULSE */
+
+    .map-point-wrapper {
+        width: 20px;
+        height: 20px;
+    }
+
+    .pulse-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* SERVER */
+
+    .server {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        width: initial;
+    }
+
+    .server::before {
+        width: initial;
+        content: "";
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        display: inline-block;
+        border: 16px solid transparent;
+        border-bottom: var(--border-grey);
+        border-bottom-width: 16px;
+    }
+
+    .server__layout {
+        width: initial;
+        min-width: 350px;
+    }
+
+}

@@ -1,0 +1,185 @@
+.testimonials {
+    margin-bottom: 64px;
+}
+
+.testimonials__header {
+    margin-bottom: 60px;
+}
+
+.testimonials__title {
+    margin: 0 auto;
+    width: 448px;
+    text-align: center;
+    font-size: 35px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.testimonials__description {
+    width: 555px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.testimonials__grid {
+    margin-bottom: 60px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    gap: var(--carousel-gap);
+}
+
+.testimonials__item {
+    border-radius: 10px;
+    max-width: 100%;
+    min-height: 200px;
+    border: var(--border-grey);
+    background-color: var(--bg);
+    padding: 22px 30px;
+    flex: 0 0 100%;
+    transition: transform 0.4s ease-in-out;
+    box-sizing: border-box;
+}
+
+.testimonials__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.testimonials__user {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.testimonials__avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.testimonials__user-name {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-dark-main);
+}
+
+.testimonials__user-country {
+    font-size: 14px;
+}
+
+.testimonials__rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonials__rating-number {
+    color: var(--color-dark-main);
+}
+
+.testimonials__rating-star {
+    height: 16px;
+    width: 16px;
+}
+
+.testimonials__rating-star--best {
+    animation:  pulse-star 1.8s ease-out infinite;;
+}
+
+@keyframes pulse-star {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.testimonials__text {
+    color: var(--color-dark-main);
+    line-height: 30px;
+}
+
+.testimonials__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonials__dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.testimonials__dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-grey);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.testimonials__dot:hover {
+    background-color: var(--color-main);
+    cursor: pointer;
+}
+
+.testimonials__dot--active {
+    background-color: var(--color-accent);
+    width: 40px;
+}
+
+.testimonials__dot--active:hover {
+    background-color: var(--color-accent);
+}
+
+.testimonials__arrows {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonials__arrow {
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--color-accent);
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    fill: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+.testimonials__arrow:hover {
+    background-color: var(--color-accent);
+    fill: var(--color-white);
+}
+
+
+@media (min-width: 768px) {
+
+    /* TESTERS */
+
+    .testimonials__item {
+        flex: 0 0 calc((100% - (var(--carousel-gap) * 2)) / 3);
+    }
+
+}

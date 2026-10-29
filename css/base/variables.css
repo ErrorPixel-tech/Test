@@ -1,0 +1,97 @@
+/* ПОЧИСТИТЬ ДУБЛИКАТЫ  */
+:root {
+
+    /* Цвета */
+    --color-dark-main: #0B132A;
+    --color-main: #4F5665;
+    --color-accent: #F53838;
+
+    --bg: #fff;
+    --color-white: #fff;
+    --color-grey: #DDE0E4;
+
+    --border-grey: 2px solid #DDDDDD;
+
+    --bg-rgba-1: rgba(255, 255, 255, 0.9);
+
+    --gradient-1: linear-gradient(to bottom, #FAFAFA 0%, #FFFFFF 100%);
+    --gradient-2: linear-gradient(to bottom, #e3e3e3 0%, #FFFFFF 100%);
+
+    --shadow-1: 36px 42px 60px rgba(0, 0, 0, 0.08);
+    --shadow-2: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+
+    /* Цвета */
+    --color-accent: #F53838;
+    --color-accent-hover: #d32f2f;
+
+    --carousel-gap: 20px;
+
+    /* Типографика */
+    --font-family-main: 'Rubik', sans-serif;
+    --font-size-base: 16px;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 25px;
+    --font-size-2xl: 35px;
+    --font-size-3xl: 50px;
+
+    /* Типографика веса */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Отступы */
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-16: 64px;
+    --spacing-20: 80px;
+    --spacing-24: 96px;
+
+
+    /* Радиусы */
+
+    /* Тени */
+
+    /* Переходы */
+
+    /* Breakpoints6 */
+
+    --fg: #111;
+    --line: #d4d4d4;
+}
+
+[data-theme="dark"] {
+    /* Цвета */
+    --color-dark-main: #e9ecf2;
+    --color-main: #b8bfce;
+    --color-accent: #b83535;
+
+    --bg: #000000;
+    --color-white: #ffffff;
+    --color-grey: #303030;
+
+    --border-grey: 2px solid #565656;
+
+    --bg-rgba-1: rgba(68, 68, 68, 0.9);
+
+    --gradient-1: linear-gradient(to bottom, #000000 0%, #070707 50%, #000000 100%);
+    --gradient-1: linear-gradient(to bottom, #070707 0%, #000000 100%);
+    --gradient-2: linear-gradient(to bottom, #070707 0%, #000000 100%);
+
+    --shadow-1: 36px 42px 60px rgba(0, 0, 0, 0.08);
+    --shadow-2: 0px 10px 30px 0px rgba(255, 255, 255, 0.2);
+
+    --fg: #fafafa;
+    --line: #333;
+
+
+}

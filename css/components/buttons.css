@@ -1,0 +1,58 @@
+/* BTNS */
+
+.btn {
+    white-space: nowrap;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    padding: 13px 45px;
+    font-size: 16px;
+    border: 1px solid var(--color-accent);
+    border-radius: 50px;
+    transition: color 0.3s, background-color 0.5s;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+}
+
+/* WTF ??? TO DO */
+.btn--squared {
+    border-radius: 10px;
+}
+
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+    z-index: 999;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(245, 56, 56, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--color-accent-hover);
+    transform: scale(1.1);
+}
+

@@ -1,0 +1,83 @@
+.stats {
+    margin-bottom: 18px;
+}
+
+.stats__layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.stats__item:hover .stats__info {
+    transform: scale(1.1);
+}
+
+.stats__info {
+    transition: transform 0.3s;
+}
+
+.stats__info {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.stats__icon-wrapper {
+    display: none;
+}
+
+.stats__number {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-dark-main);
+}
+
+.stats__label {
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+
+    /* STATS */
+
+    .stats__layout {
+        margin: 0 auto;
+        width: 1140px;
+        max-width: 100%;
+        border-radius: 10px;
+        padding: 40px 40px;
+        box-shadow: var(--shadow-1);
+    }
+
+    .stats__item {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .stats__icon-wrapper {
+        display: block;
+        height: 55px;
+        width: 55px;
+    }
+
+    .stats__info {
+        display: block;
+    }
+
+}
+
+
+/* ===== Десктоп (≥1024px) ===== */
+@media (min-width: 1024px) {
+
+    .stats {
+        margin-bottom: 96px;
+    }
+
+    .stats__layout {
+        padding: 68px 90px;
+    }
+
+}
+

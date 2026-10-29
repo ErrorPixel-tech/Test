@@ -1,0 +1,53 @@
+/* SERVICES */
+
+.services__logos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.services__logo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.services__logo:hover {
+    transform: translateY(-6px);
+}
+
+.services__logo-container:nth-child(2n) {
+    display: none;
+}
+
+.services__logo-container--amazon {
+    margin: 0 -22px 0 -22px;
+}
+
+.services__logo--amazon {
+    transform: translateY(7px) scale(1.2);
+}
+
+
+@media (min-width: 768px) {
+
+    /* SERVICES */
+
+    .services__logo-container:nth-child(2n) {
+        display: block;
+    }
+
+    .services__logo--discord {
+        transform: translateY(2px);
+    }
+
+    .services__logo-container--amazon {
+        margin: 0 -46px;
+    }
+
+    .services__logo--amazon {
+        transform: translateY(9px);
+    }
+
+}

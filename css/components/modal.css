@@ -1,0 +1,120 @@
+
+/* MODALKA */
+
+/* LOGIN CSS */
+
+.modal-title {
+    font-size: var(--font-size-2xl);
+    text-align: center;
+    margin-bottom: var(--spacing-5);
+}
+
+.modal-btn {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: var(--spacing-6);
+}
+
+.login-reset-link {
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.login-label {
+    font-size: var(--font-size-xl);
+    display: block;
+    font-weight: 500;
+    margin-bottom: var(--spacing-2);
+}
+
+.login-input {
+    border: none;
+    font-size: var(--font-size-xl);
+    /* display: inline-block; */
+    width: 100%;
+    padding: 12px 16px;
+    font-family: inherit;
+    color: var(--color-dark-main);
+    background-color: var(--bg);
+    border: var(--border-grey);
+    border-radius: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.modal-group {
+    margin-bottom: var(--spacing-3);
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: var(--spacing-6);
+}
+
+/* Скрываем стандартный чекбокс */
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Создаем кастомный чекбокс */
+.checkbox__box {
+    width: 20px;
+    height: 20px;
+    border: var(--border-grey);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    background-color: var(--bg);
+}
+
+
+
+.modal-icon {
+    margin-bottom: 10px;
+}
+
+/* Затемнение */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background-color: var(--bg);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+
+}

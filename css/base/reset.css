@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* padding: 6px; */
+    font-family: 'Rubik', sans-serif;
+    color: var(--color-main);
+    background-color: var(--bg);
+    line-height: 1.5;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    color: var(--color-dark-main);
+    font-size: inherit;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.hidden {
+    display: none;
+}

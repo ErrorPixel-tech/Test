@@ -1,0 +1,157 @@
+/* PRICING */
+.pricing {
+    margin-bottom: 150px;
+    background: var(--gradient-1);
+}
+
+.pricing__header {
+    padding-top: 80px;
+    text-align: center;
+    width: 555px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.pricing__title {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.pricing__description {
+    margin-bottom: 60px;
+}
+
+.pricing__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+.card {
+    width: 330px;
+    max-width: 100%;
+    min-height: 400px;
+    border: var(--border-grey);
+    border-radius: 10px;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 50px;
+
+}
+
+.card__image {
+    margin-bottom: 30px;
+}
+
+.card__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card__list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__price-wrapper {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+.card__price-wrapper--free,
+.card__price-amount {
+    color: var(--color-dark-main);
+}
+
+
+.card__icon {
+    transform: scale(0.5);
+    transition: transform 0.3s;
+}
+
+.card__list.visible .card__icon {
+    animation: features-pop 1s ease-in-out forwards;
+}
+
+.card__list.visible .card__item:nth-child(1) .card__icon {
+    animation-delay: 0.05s;
+}
+
+.card__list.visible .card__item:nth-child(2) .card__icon {
+    animation-delay: 0.30s;
+}
+
+.card__list.visible .card__item:nth-child(3) .card__icon {
+    animation-delay: 0.55s;
+}
+
+.card__list.visible .card__item:nth-child(4) .card__icon {
+    animation-delay: 0.80s;
+}
+
+.card__list.visible .card__item:nth-child(5) .card__icon {
+    animation-delay: 1.05s;
+}
+
+.card__list.visible .card__item:nth-child(6) .card__icon {
+    animation-delay: 1.30s;
+}
+
+.card__list.visible .card__item:nth-child(7) .card__icon {
+    animation-delay: 1.55s;
+}
+
+.card__item:hover .card__icon {
+    transform: scale(1.5);
+}
+
+
+@keyframes pricing-pop {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    /* PRICING */
+
+    .pricing__cards {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 26px;
+    }
+
+    .card {
+        min-height: 720px;
+        padding: 40px 16px 40px;
+    }
+
+    .card__list {
+        margin-bottom: 100px;
+    }
+}

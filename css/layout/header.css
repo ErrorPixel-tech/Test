@@ -1,0 +1,180 @@
+/* HEADER */
+
+header {
+    background: var(--bg);
+    padding: 22px 0;
+}
+
+.header__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo__icon {
+    height: 36px;
+    width: 36px;
+}
+
+.logo__text {
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+.toggle {
+    --w: 56px;
+    --h: 30px;
+    --dot: 22px;
+    --pad: 4px;
+
+    position: relative;
+    width: var(--w);
+    height: var(--h);
+    padding: 0;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color 0.5s;
+    flex-shrink: 0;
+
+}
+
+/* Кружок */
+.toggle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: var(--pad);
+    width: var(--dot);
+    height: var(--dot);
+    border-radius: 50%;
+    background: var(--fg);
+    transform: translateY(-50%);
+    transition:
+        left 0.5s cubic-bezier(0.68, -0.5, 0.32, 1.5),
+        background 0.5s,
+        transform 0.2s;
+}
+
+/* Смещение кружка вправо в тёмной теме */
+[data-theme="dark"] .toggle::before {
+    left: calc(var(--w) - var(--dot) - var(--pad) - 3px);
+    /* -3px компенсирует бордер (1.5px × 2) */
+}
+
+/* Hover / active — микро-отклик */
+.toggle:hover::before {
+    transform: translateY(-50%) scale(1.08);
+}
+
+.toggle:active::before {
+    transform: translateY(-50%) scale(0.92);
+}
+
+/* Фокус для клавиатуры */
+.toggle:focus-visible {
+    outline: 2px solid var(--fg);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toggle::before {
+        transition: none;
+    }
+}
+
+.header__actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header__btn-sign-in {
+    font-size: 14px;
+    white-space: nowrap;
+    color: var(--color-dark-main);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__btn-sign-in:hover {
+    color: var(--color-accent);
+}
+
+.header__btn-sign-up {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+/* HEADER END */
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 46px 0;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo__text {
+        display: block;
+        font-weight: 400;
+        font-size: 20px;
+        color: var(--color-dark-main);
+    }
+
+    .logo__text-bold {
+        font-weight: 700;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 40px;
+        row-gap: 10px;
+        align-items: center;
+    }
+
+    .nav__link {
+        font-size: 16px;
+        color: var(--color-main);
+        transition: color 0.3s;
+    }
+
+    .nav__link:hover {
+        color: var(--color-accent);
+    }
+
+    .header__actions {
+        gap: 30px;
+    }
+
+    .header__btn-sign-in {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav__list {
+        column-gap: 40px;
+    }
+}

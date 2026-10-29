@@ -1,0 +1,15 @@
+/* CONTAINER */
+.container {
+    padding: 0 18px;
+}
+
+/* ===== Планшет (≥768px) ===== */
+@media (min-width: 768px) {
+
+
+    /* CONTAINER */
+    .container {
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+}
