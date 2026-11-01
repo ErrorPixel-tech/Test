@@ -2,7 +2,6 @@
 @import url('base/reset.css');
 
 @import url('components/buttons.css');
-@import url('components/modal.css');
 @import url('components/login-form.css');
 
 @import url('layout/container.css');
@@ -19,5 +18,11 @@
 @import url('sections/cta.css');
 
 @import url('utils/animations.css');
+
+@import url('components/modalka.css');
+
+@import url('modals/register.css');
+@import url('modals/login.css');
+@import url('modals/feedback.css');
 
 /* @import url(''); */

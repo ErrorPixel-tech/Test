@@ -1,0 +1,56 @@
+/* Модалка: оверлей на весь экран */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hidden в HTML имеет display:none, но flex его перебивает —
+   поэтому явно управляем через атрибут */
+.modal[hidden] {
+  display: none;
+}
+
+/* Затемнённый фон */
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Сам диалог */
+.modal__dialog {
+  position: relative;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: min(420px, 90vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal__dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Блокировка скролла страницы */
+body.modal-open {
+  overflow: hidden;
+}

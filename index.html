@@ -12,6 +12,159 @@
 </head>
 
 <body>
+    <!-- Модалка 1: логин -->
+    <div class="modal" data-modal="login" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="login-title">
+            <button class="modal__close" data-close-modal aria-label="Закрыть">×</button>
+            
+            <h2 class="auth__title" id="login-title">Вход</h2>
+
+            <form class="auth__form" id="login-form" novalidate>
+                <!-- Email -->
+                <div class="field">
+                    <label class="field__label" for="login-email">Email</label>
+                    <input class="field__input" type="email" id="login-email" name="email" autocomplete="username"
+                        placeholder="you@example.com" required aria-describedby="login-email-error">
+                    <p class="field__error" id="login-email-error" role="alert"></p>
+                </div>
+
+                <!-- Пароль -->
+                <div class="field">
+                    <label class="field__label" for="login-password">Пароль</label>
+                    <div class="field__wrap">
+                        <input class="field__input" type="password" id="login-password" name="password"
+                            autocomplete="current-password" placeholder="Ваш пароль" required
+                            aria-describedby="login-password-error">
+                        <button class="field__toggle" type="button" id="login-toggle-password" aria-label="Показать пароль"
+                            aria-pressed="false">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="field__error" id="login-password-error" role="alert"></p>
+                </div>
+
+                <!-- Запомнить меня -->
+                <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="login-remember" name="remember">
+                    <span class="checkbox__box" aria-hidden="true"></span>
+                    <span class="checkbox__text">Запомнить меня</span>
+                </label>
+
+                <button class="btn" type="submit" id="login-submit-btn">
+                    <span class="btn__text">Войти</span>
+                    <span class="btn__spinner" hidden></span>
+                </button>
+
+                <p class="auth__status" id="login-form-status" role="status"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модалка 2: регистрация -->
+    <div class="modal" data-modal="register" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="register-title">
+            <button class="modal__close" data-close-modal aria-label="Закрыть">×</button>
+            
+            <h2 class="auth__title">Регистрация</h2>
+            <form class="auth__form" id="signup-form" novalidate>
+                <!-- Имя -->
+                <div class="field">
+                    <label class="field__label" for="signup-name">Имя</label>
+                    <input class="field__input" type="text" id="signup-name" name="name" autocomplete="name"
+                        placeholder="Как к вам обращаться" required minlength="2" aria-describedby="name-error">
+                    <p class="field__error" id="signup-name-error" role="alert"></p>
+                </div>
+
+                <!-- Email -->
+                <div class="field">
+                    <label class="field__label" for="signup-email">Email</label>
+                    <input class="field__input" type="email" id="signup-email" name="email" autocomplete="email"
+                        placeholder="you@example.com" required aria-describedby="email-error">
+                    <p class="field__error" id="signup-email-error" role="alert"></p>
+                </div>
+
+                <!-- Пароль -->
+                <div class="field">
+                    <label class="field__label" for="signup-password">Пароль</label>
+                    <div class="field__wrap">
+                        <input class="field__input" type="password" id="signup-password" name="password"
+                            autocomplete="new-password" placeholder="Минимум 8 символов" required minlength="8"
+                            aria-describedby="password-error">
+                        <button class="field__toggle" type="button" id="signup-toggle-password" aria-label="Показать пароль"
+                            aria-pressed="false">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="field__error" id="password-error" role="alert"></p>
+                </div>
+
+                <button class="btn" type="submit" id="signup-submit-btn">
+                    <span class="btn__text">Создать аккаунт</span>
+                    <span class="btn__spinner" hidden></span>
+                </button>
+
+                <p class="auth__status" id="signup-form-status" role="status"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модалка 3: обратная связь -->
+    <div class="modal" data-modal="feedback" hidden>
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+            <button class="modal__close" data-close-modal aria-label="Закрыть">×</button>
+            <h1 class="auth__title">Связаться со мной</h1>
+            <p class="auth__subtitle">Оставьте контакты — отвечу в течение дня.</p>
+
+            <form class="auth__form" id="feedback-contact-form" novalidate>
+                <!-- Телефон -->
+                <div class="field">
+                    <label class="field__label" for="feedback-phone">Телефон</label>
+                    <input class="field__input" type="tel" id="feedback-phone" name="phone" inputmode="tel" autocomplete="tel"
+                        placeholder="+7 (___) ___-__-__" required aria-describedby="phone-error">
+                    <p class="field__error" id="phone-error" role="alert"></p>
+                </div>
+
+                <!-- Email -->
+                <div class="field">
+                    <label class="field__label" for="feedback-email">Email</label>
+                    <input class="field__input" type="email" id="feedback-email" name="email" autocomplete="email"
+                        placeholder="you@example.com" required aria-describedby="email-error">
+                    <p class="field__error" id="email-error" role="alert"></p>
+                </div>
+
+                <!-- Комментарий -->
+                <div class="field">
+                    <label class="field__label" for="feedback-comment">Комментарий</label>
+                    <textarea class="field__input field__textarea" id="feedback-comment" name="comment" rows="4" maxlength="500"
+                        placeholder="Коротко о задаче или вопросе" required
+                        aria-describedby="comment-error comment-counter"></textarea>
+                    <div class="field__meta">
+                        <p class="field__error" id="feedback-comment-error" role="alert"></p>
+                        <span class="field__counter" id="feedback-comment-counter">0 / 500</span>
+                    </div>
+                </div>
+
+                <button class="btn" type="submit" id="feedback-submit-btn">
+                    <span class="btn__text">Отправить</span>
+                    <span class="btn__spinner" hidden></span>
+                </button>
+
+                <p class="auth__status" id="feedback-form-status" role="status"></p>
+            </form>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="header__layout">
@@ -42,8 +195,8 @@
                 </nav>
                 <button class="toggle" id="theme-toggle" aria-label="Переключить тему"></button>
                 <div class="header__actions">
-                    <button class="header__btn-sign-in" id="openRegisterBtn">Sign in</button>
-                    <button class="header__btn-sign-up btn" id="openLoginBtn">Sign Up</button>
+                    <button class="header__btn-sign-in" data-open-modal="login">Sign in</button>
+                    <button class="header__btn-sign-up btn" data-open-modal="register">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -61,7 +214,8 @@
                             class="hero__description-highlight">LaslesVPN</span> discover interesting
                         features from us.
                     </p>
-                    <a href="#" id="openSubmitBtn" class="hero__btn btn btn--squared">Get Started</a>
+                    <button href="#" class="hero__btn btn btn--squared" data-open-modal="feedback">Get
+                        Started</button>
                 </div>
                 <div class="hero__image">
                     <img src="images/illustrations/hero-illustration.svg" alt="">
@@ -161,15 +315,15 @@
                                 <span>Unlimited Bandwitch</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Encrypted Connection</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>No Traffic Logs</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Works on All Devices</span>
                             </li>
                         </ul>
@@ -183,23 +337,23 @@
                         <h3 class="card__title">Standard Plan</h3>
                         <ul class="card__list">
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Unlimited Bandwitch</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Encrypted Connection</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>No Traffic Logs</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Works on All Devices</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Connect Anyware</span>
                             </li>
                         </ul>
@@ -214,27 +368,27 @@
                         <h3 class="card__title">Premium Plan</h3>
                         <ul class="card__list">
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Unlimited Bandwitch</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Encrypted Connection</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>No Traffic Logs</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Works on All Devices</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Connect Anyware</span>
                             </li>
                             <li class="card__item">
-                                <img  class="card__icon" src="images/icons/check-icon-green.svg" alt="">
+                                <img class="card__icon" src="images/icons/check-icon-green.svg" alt="">
                                 <span>Get New Features</span>
                             </li>
                         </ul>
@@ -510,7 +664,8 @@
                         <div class="testimonials__rating">
                             <span class="rating-number">5.0</span>
                             <div class="testimonials__rating-star-container">
-                                <img src="images/icons/star-icon.svg" alt="" class="testimonials__rating-star testimonials__rating-star--best">
+                                <img src="images/icons/star-icon.svg" alt=""
+                                    class="testimonials__rating-star testimonials__rating-star--best">
                             </div>
                         </div>
                     </div>
@@ -550,7 +705,8 @@
                         </div>
                         <div class="testimonials__rating">
                             <span class="rating-number">5.0</span>
-                            <img src="images/icons/star-icon.svg" alt="" class="testimonials__rating-star testimonials__rating-star--best">
+                            <img src="images/icons/star-icon.svg" alt=""
+                                class="testimonials__rating-star testimonials__rating-star--best">
                         </div>
                     </div>
                     <p class="testimonials__text">
@@ -720,65 +876,6 @@
         </div>
     </footer>
 
-    <!-- MODALS -->
-
-    <div class="modal-overlay" id="login">
-        <div class="modal">
-            <button class="modal-close" id="closeLoginBtn">&times;</button>
-            <div class="modal-content">
-                <h2 class="modal-title">Log in</h2>
-                <div class="modal-group">
-                    <label class="login-label" for="">Login: </label>
-                    <input class="login-input" placeholder="Martin" type="text">
-                </div>
-                <div class="modal-group">
-                    <label class="login-label" for="">Password:</label>
-                    <input class="login-input" type="text" placeholder="Jordan">
-                </div>
-                <div class="modal-group">
-                    <label class="checkbox">
-                        <input type="checkbox" class="checkbox__input" name="remember">
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__text">Запомнить меня</span>
-                    </label>
-                </div>
-                <div>
-                    <button class="modal-btn btn">Log in</button>
-                </div>
-                <a class="login-reset-link" href="#">reset password</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="consultation">
-        <div class="modal">
-            <button class="modal-close" id="closeSubmitBtn">&times;</button>
-            <div class="modal-icon">
-                <img src="./images/icons/logo-icon.svg" alt="" srcset="">
-            </div>
-            <h2 class="modal-title">Submit application</h2>
-            <form action="" method="post">
-                <div class="modal-group">
-                    <label class="login-label" for="">Name: </label>
-                    <input class="login-input" placeholder="Martin" type="text">
-                </div>
-                <div class="modal-group">
-                    <label class="login-label" for="">Email:</label>
-                    <input class="login-input" type="text" placeholder="Jordan">
-                </div>
-                <div>
-                    <button class="modal-btn btn">Submit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="register">
-        <div class="modal">
-            <button class="modal-close" id="closeRegisterBtn">&times;</button>
-            <h2>Register</h2>
-        </div>
-    </div>
 
     <!--  BACK TO TOP BUTTON -->
 
